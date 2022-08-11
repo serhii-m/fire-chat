@@ -14,7 +14,7 @@ export const handlePressEnter = (e: React.KeyboardEvent<HTMLDivElement>) => {
   }
 };
 
-export const getMessageTime = (seconds: number = 0) => {
+export const getMessageTime = (seconds = 0) => {
   if (seconds) {
     const timeStr = new Date(seconds * 1000).toTimeString().slice(0, 8);
     const dateStr = new Date(seconds * 1000).toDateString().slice(3, 10);
@@ -24,7 +24,7 @@ export const getMessageTime = (seconds: number = 0) => {
   return '';
 };
 
-export const assignAuthErrorMessage = (errorCode: string = '') => {
+export const assignAuthErrorMessage = (errorCode = '') => {
   switch (errorCode) {
     case authErrorCodes.wrongPassword:
       return authErrorMessages.wrongPassword;

@@ -17,7 +17,7 @@
     },
     "ecmaVersion": 2021,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": ["./tsconfig.json", "./functions/tsconfig.json"]
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
@@ -26,6 +26,11 @@
     "react/jsx-props-no-spreading": ["off"],
     "react/no-unescaped-entities": ["off"],
     "import/prefer-default-export": ["off"],
+    "prefer-template": ["off"],
+    "import/no-extraneous-dependencies" : ["error", {"devDependencies": true}],
+    "no-underscore-dangle":  ["error", { "allow": ["__WB_MANIFEST"] }],
+    "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
+    "no-param-reassign": 0,
     "react/function-component-definition": [
       2,
       {

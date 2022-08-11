@@ -15,7 +15,7 @@ export const ChatWrapper: React.FC = () => {
       <Box component="header" sx={styles.appBar}>
         <Box>
           <Typography variant="h4" sx={styles.title}>
-            &#128293; Fire Chat
+            &#128293; fire chat
           </Typography>
         </Box>
         {isCorrectRoute && <SignOut />}

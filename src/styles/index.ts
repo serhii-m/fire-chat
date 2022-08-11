@@ -18,14 +18,22 @@ export const styles = {
     zIndex: 1000,
   },
   title: {
-    backgroundImage: 'url(https://i.gifer.com/CaH.gif)',
-    backgroundSize: 'cover',
-    color: 'transparent',
-    fontWeight: 700,
-    backgroundClip: 'text',
-    mozBackgroundClip: 'text',
-    webkitBackgroundClip: 'text',
     textTransform: 'uppercase',
+    color: '#fff',
+    fontWeight: 700,
+    background:
+      'linear-gradient(to right, #ffc11f, #fe650d, #f33c04, #da1f05, #a10100)',
+    backgroundSize: '200% auto',
+    backgroundClip: 'text',
+    textFillColor: 'transparent',
+    webkitBackgroundClip: 'text',
+    webkitTextFillColor: 'transparent',
+    animation: 'textclip 2.5s linear infinite',
+    '& @keyframes textclip': {
+      to: {
+        backgroundPosition: '200% center',
+      },
+    },
   },
   headerWrapper: {
     display: 'flex',
